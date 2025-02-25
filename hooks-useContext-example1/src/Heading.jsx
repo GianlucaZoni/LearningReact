@@ -1,4 +1,9 @@
+import { useContext } from "react"
+
+import { LevelContext } from "./LevelContext"
+
 export default function Heading({ level, children }) {
+  const level = useContext(LevelContext)
   switch (level) {
     case 1:
       return <h1>{children}</h1>
